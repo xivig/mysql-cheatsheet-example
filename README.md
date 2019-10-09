@@ -136,3 +136,34 @@ update sample_table SET name="Abc" where id=1;
 ```sql
 DELETE from sample_table WHERE id=2;
 ```
+
+### ** Complete example **
+```sql
+
+-- final database backup
+DROP TABLE IF EXISTS `sample_table`;
+CREATE TABLE IF NOT EXISTS `sample_table` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `cell_no` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+INSERT INTO `sample_table` (`id`, `first_name`, `last_name`, `cell_no`, `email`) VALUES
+(1, 'Abc', 'Coll', '258226', 'abc@gmail.com'),
+(2, 'Cool1', 'Coll', '258227', 'abc1@gmail.com'),
+(3, 'Cool2', 'Coll', '258228', 'abc2@gmail.com'),
+(4, 'Cool3', 'Coll', '258229', 'abc3@gmail.com'),
+(5, 'Cool3', 'Coll', '258220', 'abc4@gmail.com'),
+(6, 'Cool4', 'Coll', '258221', 'abc5@gmail.com');
+COMMIT;
+
+-- add a new column to the right of the email
+ALTER TABLE `sample_table` ADD `cool` VARCHAR(100) NOT NULL AFTER `email`;
+-- delete column cool from the table
+ALTER TABLE `sample_table`  DROP `cool`;
+
+```
