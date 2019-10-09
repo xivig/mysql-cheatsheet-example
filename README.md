@@ -1,4 +1,4 @@
-# mysql-cheatsheet-exaple
+# mysql-cheatsheet-example
 Mysql cheat sheet for beginners
 ## DML
 
