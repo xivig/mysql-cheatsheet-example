@@ -1,6 +1,6 @@
 # mysql-cheatsheet-example
 Mysql cheat sheet for beginners
-## DML
+## DDL
 
 1
 ### A) CREATE DATABASE
@@ -92,7 +92,7 @@ SHOW DATABASES
 SHOW TABLES
 ```
 
-DML
+## DML
 
 1
 ### SELECT * FROM table_name
