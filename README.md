@@ -117,7 +117,7 @@ INSERT into sample_table (id, name, cell_no) VALUES (
 -- insert multiple  data in the table  
 use sample_database;
 INSERT into sample_table (id, name, cell_no) VALUES
-  (null,'Cool', '258226'),
+  	(null,'Cool', '258226'),
 	(null,'Cool1', '258227'),
 	(null,'Cool2', '258228'),
 	(null,'Cool3', '258229'),
